@@ -12,7 +12,8 @@ const sidebar = {
       type: "spring",
       stiffness: 20,
       restDelta: 2
-    }
+    },
+    display:"flex",
   }),
   closed: {
     clipPath: "circle(30px at 40px 40px)",
@@ -21,7 +22,10 @@ const sidebar = {
       type: "spring",
       stiffness: 400,
       damping: 40
-    }
+    },
+    transitionEnd: {
+      display:"none",
+  }
   }
 };
 
