@@ -101,6 +101,7 @@ const Home = () => {
         </div>
       </Fade>
       <Policy/>
+      
     </div>
   );
 };

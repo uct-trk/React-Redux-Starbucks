@@ -8,7 +8,8 @@ import {
 import {Fade} from 'react-awesome-reveal'
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
-import Footer from './components/Footer/Footer';
+import {Footer} from './components/Footer/Footer';
+import Bottom from './components/Bottom/Bottom';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Home />
             <Fade>
               <Footer/>
+              <Bottom/>
             </Fade>
           </Route>
         </Switch>
