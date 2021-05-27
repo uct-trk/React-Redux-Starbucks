@@ -1,0 +1,13 @@
+.findAStore{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: black;
+    opacity: 0.87;
+    margin-right: 20px;
+}
+.findAStore:hover{
+    color: #00B248;
+    transition: all 300ms ease;
+}

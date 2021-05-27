@@ -1,0 +1,32 @@
+.submit__wrap{
+    position: relative;
+    padding: 3.2rem 0 .8rem!important;
+    text-align: right;
+}
+
+.formSubmit {
+    position: relative;
+    font-family: inherit;
+    display: flex;
+    align-items: flex-end !important;
+    flex-direction: row-reverse;
+    text-align: right !important;
+    margin-left: 280px;
+    z-index: 1;
+    padding: 18px 24px;
+    background: #00a862;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.24), 0 8px 12px rgba(0, 0, 0, 0.14);
+    border: 0;
+    border-radius: 500px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.2;
+    overflow: hidden;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    transition-property: transform, box-shadow, width, height;
+    transition-timing-function: ease;
+    cursor: pointer;
+  }
+  
