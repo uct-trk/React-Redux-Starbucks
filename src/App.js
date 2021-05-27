@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
 import {Fade} from 'react-awesome-reveal'
@@ -16,6 +15,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './redux/userSlice';
 import { useEffect } from 'react';
 import { auth } from './Firebase/firebase';
+import SignUp from './components/SignUp/SignUp';
 
 
 function App() {
@@ -56,6 +56,10 @@ function App() {
           <Route exact path="/account/signin">
             {/*If user connected before. Redirect push to menu otherwise login page is going to open */}
             {user ? <Redirect to="/menu"/> : <Login/>}
+          </Route>
+          <Route exact path="/account/signup">
+            {/*If user connected before. Redirect push to menu otherwise login page is going to open */}
+            {user ? <Redirect to="/menu"/> : <SignUp/>}
           </Route>
         </Switch>
     </Router>

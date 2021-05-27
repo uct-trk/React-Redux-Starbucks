@@ -19,6 +19,7 @@ const Login = () => {
   const dispatch = useDispatch();
 
   // firebase auth
+  // console uid ve displayName firebaseden geliyor
   const onSubmit = ({ email, password }) => {
     auth
       .signInWithEmailAndPassword(email, password)

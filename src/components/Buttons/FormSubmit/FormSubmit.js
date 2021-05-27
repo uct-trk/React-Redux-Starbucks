@@ -1,10 +1,10 @@
 import React from 'react'
 import './formSubmit.css'
 
-const FormSubmit = ({ name, type}) => {
+const FormSubmit = ({ name, type, margin}) => {
     return (
         <div className="submit__wrap">
-        <button style={{textAlign: "right"}} className='formSubmit' type={type}>
+        <button style={{textAlign: "right", marginLeft: margin}} className='formSubmit' type={type}>
         {name}
       </button>
       </div>
