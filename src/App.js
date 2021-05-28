@@ -16,6 +16,7 @@ import { login, logout, selectUser } from './redux/userSlice';
 import { useEffect } from 'react';
 import { auth } from './Firebase/firebase';
 import SignUp from './components/SignUp/SignUp';
+import Menu from './components/Menu/Menu';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
 
+  // ıf you refresh the page you wont be offline you still online.
+  // ıf you want to logout just click logout
   useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {
       if(userAuth) {
@@ -60,6 +63,16 @@ function App() {
           <Route exact path="/account/signup">
             {/*If user connected before. Redirect push to menu otherwise login page is going to open */}
             {user ? <Redirect to="/menu"/> : <SignUp/>}
+          </Route>
+          <Route exact path="/menu">
+            {!user ? (
+              <Redirect to="/account/signin"/>
+            ) : (
+              <>
+              <Header menuPage/>
+              <Menu/>
+              </>
+            )}
           </Route>
         </Switch>
     </Router>

@@ -15,7 +15,6 @@ import {login} from './../../redux/userSlice'
 const SignupForm = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const [passwordShown, setPasswordShown] = useState(false)
-  const [err, setErr] = useState(false)
   const dispatch = useDispatch();
   const history = useHistory();
 

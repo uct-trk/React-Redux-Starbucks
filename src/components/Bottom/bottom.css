@@ -19,9 +19,7 @@
 .links a{
     margin: 0 20px;
 }
-.developer{
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    margin-left: 49px;
+div.developer{
+    margin-left: 50px;
+    margin-bottom: 16px;
 }

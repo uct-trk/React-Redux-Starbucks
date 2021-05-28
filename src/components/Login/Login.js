@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./login.css";
 import { useForm } from "react-hook-form";
 import { TextField } from "@material-ui/core";
@@ -17,6 +17,7 @@ const Login = () => {
   const { handleSubmit, register, watch, errors } = useForm();
   const [passwordShown, setPasswordShown] = useState(false);
   const dispatch = useDispatch();
+  const history = useHistory()
 
   // firebase auth
   // console uid ve displayName firebaseden geliyor
@@ -31,9 +32,11 @@ const Login = () => {
             displayName: userAuth.user.displayName,
           })
         );
+        history.push("/menu");
       })
       .catch((error) => alert(error.message));
   };
+  
   return (
     <div className="login">
       <div className="header__login">

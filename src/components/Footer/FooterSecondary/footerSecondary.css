@@ -41,6 +41,7 @@
   .footerSecondary__copyright {
     font-weight: 600;
     margin-right: 180px;
+    text-align: center;
   }
   
   @media (max-width: 425px) {

@@ -11,10 +11,10 @@
 }
 
 .header__menuPage{
-    position: fixed;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 100%;
+    position: fixed;
 }
 
 .header__logo{
