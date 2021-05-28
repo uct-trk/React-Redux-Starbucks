@@ -17,6 +17,7 @@ import { useEffect } from 'react';
 import { auth } from './Firebase/firebase';
 import SignUp from './components/SignUp/SignUp';
 import Menu from './components/Menu/Menu';
+import FeaturedScreen from './components/FeaturedScreen/FeaturedScreen';
 
 
 function App() {
@@ -73,6 +74,16 @@ function App() {
               <Menu/>
               </>
             )}
+          </Route>
+
+          <Route exact path="/menu/featured">
+
+              <Header/>
+              <FeaturedScreen/>
+              <Fade>
+                <Footer/>
+                <Bottom/>
+              </Fade>
           </Route>
         </Switch>
     </Router>
